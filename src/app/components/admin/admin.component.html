@@ -1,0 +1,25 @@
+<div class="container">
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>Player Name</th>
+        <th>Character Name</th>
+        <th>Class</th>
+        <th class="text-right">Race</th>
+      </tr>
+      <tr *ngFor="let character of characters">
+        <td>
+          {{character.player}}
+        </td>
+        <td>
+          {{character.name}}
+        </td>
+        <td>
+          {{character.charClass}}
+        </td>
+        <td class="text-right">
+          {{character.race}}
+        </td>
+      </tr>
+    </table>
+  </div>
+  
