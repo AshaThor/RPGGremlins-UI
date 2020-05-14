@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     'monk',
     'paladin',
     'ranger',
-    'rouge',
+    'rogue',
     'sourcerer',
     'warlock',
     'wizard',
@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
 
   submitCharacter(){
     if(this.characterForm.valid){
-      this.validMessage = "Your character has been recorded. Their not the messiah, Their a very naughty character, now piss off";
+      this.validMessage = "Your character has been recorded. They're not the messiah, They're a very naughty character, now piss off";
       this.characterService.createCharacter(this.characterForm.value).subscribe(
         data => {
           this.characterForm.reset();
