@@ -13,12 +13,19 @@ const httpOptions = {
 export class CharacterService {
 
   constructor(private http:HttpClient) { }
+
   getCharacters(){
-    return this.http.get('/server/api/v1/characters');
+    let token = localStorage.getItem('access_token');
+    return this.http.get('/server/api/v1/characters',
+      {headers:new HttpHeaders().set('Authorization', 'Bearer ' + token)}
+    );
   }
   
   getCharacter(id: number){
-    return this.http.get('/server/api/v1/characters/' + id)
+    let token = localStorage.getItem('access_token');
+    return this.http.get('/server/api/v1/characters/' + id,
+    {headers:new HttpHeaders().set('Authorization', 'Bearer ' + token)}
+    );
   }
 
   createCharacter(character){

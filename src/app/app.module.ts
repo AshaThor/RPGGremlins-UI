@@ -11,6 +11,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ViewCharacterComponent } from './components/view-character/view-character.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CallbackComponent } from './components/callback/callback.component';
+import { AuthService } from './services/auth.service'
+import { AuthGuard } from './services/auth.guard';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     ViewCharacterComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CallbackComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,11 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [CharacterService],
+  providers: [
+    CharacterService,
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

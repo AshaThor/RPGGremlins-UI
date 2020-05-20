@@ -11,7 +11,7 @@
           {{character.player}}
         </td>
         <td>
-          {{character.name}}
+          <a [routerLink] = "['/admin/view', character.id]">{{character.name}}</a>
         </td>
         <td>
           {{character.charClass}}

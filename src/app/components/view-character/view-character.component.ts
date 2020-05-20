@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CharacterService } from '../../services/character.service'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-character',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewCharacterComponent implements OnInit {
 
-  constructor() { }
+  public characterReg;
+
+  constructor(private characterService: CharacterService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getCharacterReg(this.route.snapshot.params.id);
+  }
+
+  getCharacterReg(id:number){
+    this.characterService.getCharacter(id).subscribe(
+      data => {
+        this.characterReg = data;
+      },
+      err => console.error(err),
+      () => console.log('Characters Loaded')
+    )
   }
 
 }
