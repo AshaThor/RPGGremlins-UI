@@ -15,6 +15,7 @@ import { CallbackComponent } from './components/callback/callback.component';
 import { AuthService } from './services/auth.service'
 import { AuthGuard } from './services/auth.guard';
 import { LoginComponent } from './components/login/login.component';
+import { ClassesComponent } from './components/classes/classes.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginComponent } from './components/login/login.component';
     HeaderComponent,
     FooterComponent,
     CallbackComponent,
-    LoginComponent
+    LoginComponent,
+    ClassesComponent
   ],
   imports: [
     BrowserModule,

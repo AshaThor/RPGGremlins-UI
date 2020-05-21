@@ -6,6 +6,7 @@ import { ViewCharacterComponent } from './components/view-character/view-charact
 import { CallbackComponent } from './components/callback/callback.component'
 //import { AuthGuard } from './services/auth.guard'
 import { LoginComponent } from './components/login/login.component';
+import { ClassesComponent } from './components/classes/classes.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: '',
     component: HomeComponent
   }, 
+  {
+    path: 'classes',
+    component: ClassesComponent
+  },
   {
     path: 'login',
     component: LoginComponent

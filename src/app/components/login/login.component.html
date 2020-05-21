@@ -1,8 +1,37 @@
-
+<!-- <div>
+    <h1>filler</h1>
+    <H1>Login currently not avalible.</H1>
+    <p>Due to a lack of experence and knowage the dev building this has said
+        goodbye to security and adopted a "Screw it" mentality
+    </p>
+    <p>
+        You are free to use the website in the following way, 
+        /characters/YOUR_CHRACTER_NAME
+        This is on a PLEASE BE NICE setting and means
+        ONLY ACCESS <b>YOUR</b> CHRACTERS!
+    </p>
+    <p>
+        Security will be implimented when the dev learns how to spring security!
+        *Dont Hold Your Breath*
+    </p>
+</div>   -->
 <div class="login-form">
-    <form [formGroup]="loginForm" (ngSubmit)="submitLogin()" novalidate>
-        <h2 class="text-center">Log in</h2>       
-        <div class="form-group">
+    <form [formGroup]="loginForm"
+      novalidate>
+        <h2 class="text-center">Log in / Sign up? </h2>
+        <p class="text-center">You may be wondering where login is? <br>
+        That my friend is a valid question!<br>
+        Unfortunatly its one that has but one answer 
+        You see I am both lazy, and inexperenced with security. <br> 
+        So, when it came to this I had 2 options: Learn Spring Security or Screw it 
+        I choses Spring Security, I subsiqently choose falling down a rabbit hole and nodding 
+        at tutorials that looked far too compliated.<br> I even tried some (You dont wanna see the code) 
+        after a while, I thought to meyself, "Ash? Who are your users?<br> Do they care AT ALL about a 
+        secure login where they can only access their own characters? <br>
+        My reply to this ofc was "Chas" followed by "But TBH I can live with his disaproval" (As i have much my dev life).<br>
+        So here we have it, you have spent a bit of your life reading this crap, ive spent even more of my life writing it
+        do me a favour, don't be "That guy" and mess with others characters, just play with your own and dont make me ban you </p>    
+        <!-- <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" formControlName="username" required="required">
         </div>
         <div class="form-group">
@@ -14,7 +43,7 @@
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
             <a href="#" class="float-right">Forgot Password?</a>
-        </div>        
+        </div>-->
     </form>
-    <p class="text-center"><a href="#">Create an Account</a></p>
+    <!-- <p class="text-center"><a href="#">Create an Account</a></p> -->
 </div>

@@ -10,20 +10,15 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class CharacterService {
+export class ClassService {
 
   constructor(private http:HttpClient) { }
 
-  getCharacters(){
+  getClasses(){
     return this.http.get('/server/api/v1/characters');
   }
   
-  getCharacter(id: number){
+  getClass(id: number){
     return this.http.get('/server/api/v1/characters/' + id);
-  }
-
-  createCharacter(character){
-    let body = JSON.stringify(character);
-    return this.http.post('/server/api/v1/characters' , body , httpOptions)
   }
 }
